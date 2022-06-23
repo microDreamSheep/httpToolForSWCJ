@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<SWCJ>
+    <config>
+        <timeout value="10000"/>
+        <userAgent>
+            <value>Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/97.0.4692.71
+                Safari/537.36 Edg/97.0.1072.62
+            </value>
+            <value>User-Agent: Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 5.1; TencentTraveler 4.0)</value>
+            <value>User-Agent: Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 5.1; 360SE)</value>
+        </userAgent>
+        <executes>
+            <executes>com.midream.sheep.swcj.core.executetool.execute.httpforswcj.tool.HttpForSwcjConfigures</executes>
+        </executes>
+        <createTactics isCache="false"/>
+        <chooseStrategy type="METHOD_NAME"/>
+    </config>
+    <swc id="getHtml">
+        <cookies>
+            uuid_tt_dd=4646545646-1642571061362-956268; UserName=xmdymcsheepsir;
+        </cookies>
+        <parentInterface class="com.midream.sheep.swcj.core.executetool.execute.httpforswcj.GETASD"/>
+        <url name="getJson" inPutName="">
+            <type type="GET"/>
+            <value>
+            </value>
+            <path path="https://pic.netbian.com/index_5.html"/>
+            <parseProgram isHtml="false" type="json">
+                <json>
+                    <jsonRe>
+                        content-type:application/json;charset=utf-8
+                    </jsonRe>
+                    <jsonJava>
+                        charset=GBK
+                    </jsonJava>
+                </json>
+            </parseProgram>
+        </url>
+    </swc>
+</SWCJ>

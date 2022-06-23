@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<SWCJ>
+    <config>
+        constructionSpace={false,E:\临时文件};
+        timeout={10000};
+        userAgent={
+        Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/97.0.4692.71 Safari/537.36 Edg/97.0.1072.62,
+        User-Agent: Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 5.1; TencentTraveler 4.0),
+        User-Agent: Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 5.1; 360SE)
+        };
+        executes={
+            executes:{com.midream.sheep.swcj.core.executetool.execute.httpforswcj.tool.HttpForSwcjConfigures}
+        };
+        chooseStrategy={METHOD_NAME};
+    </config>
+    <swc>
+        <id>getHtml</id>
+        <cookies>
+
+        </cookies>
+        <parentInterface>com.midream.sheep.swcj.core.executetool.execute.httpforswcj.GETASD</parentInterface>
+        <url>
+            name={getJson};
+            inPutName={};
+            type={GET};
+            value={};
+            path={https://dl.softmgr.qq.com/original/Office/typora-setup-x64_0.9.78.exe};
+            parseProgram-!>{
+            false,
+            http,
+            xml->{
+                <json>
+                    <jsonRe>
+                        content-type:application/json;charset=utf-8
+                    </jsonRe>
+                    <jsonJava>
+                        charset=GBK
+                    </jsonJava>
+                </json>
+            }
+            };
+        </url>
+    </swc>
+</SWCJ>
