@@ -113,7 +113,6 @@ public class HttpForSWCJ<T> implements SWCJExecute<T> {
         RequestConfigure requestConfigure = new RequestConfigure();
         String[] split = in.split("\n");
         for (String s : split) {
-            s.split("=");
             if (s.contains("charset")) {
                 requestConfigure.setCharset(s.split("=")[1]);
             }

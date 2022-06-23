@@ -21,13 +21,7 @@ public class main {
         GETASD html = (GETASD) swcjXmlFactory.getWebSpiderById("getHtml");
         long end = System.currentTimeMillis();
         System.out.println("耗时：" + (end - start));
-        OutputStream os = new FileOutputStream("e://a.exe");
-        try (InputStream inputStream = html.getJson()[0]) {
-            int len = -1;
-            byte[] buffer = new byte[1024];
-            while ((len = inputStream.read(buffer)) != -1) {
-                os.write(buffer,0,len);
-            }
-        }
+        System.out.println(html.getJson()[0]);
+
     }
 }
