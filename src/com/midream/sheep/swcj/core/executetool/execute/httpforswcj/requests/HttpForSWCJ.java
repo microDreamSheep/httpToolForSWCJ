@@ -111,7 +111,7 @@ public class HttpForSWCJ<T> implements SWCJExecute<T> {
      */
     public RequestConfigure getRequestConfigure(String in) {
         RequestConfigure requestConfigure = new RequestConfigure();
-        String[] split = in.split("\n");
+        String[] split = in.split("#\\{swcj}");
         for (String s : split) {
             if (s.contains("charset")) {
                 requestConfigure.setCharset(s.split("=")[1]);
